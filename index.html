@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/RPSLS_Icon.png">
+</head>
+
+<body>
+
+    <div class="modal fade" id="showRulesModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content modal-bg-muted-purple">
+                <div class="container modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="modal-title text-center" id="exampleModalToggleLabel">Game Mode</h1>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+                            <p>
+                                ✂️ Scissors cuts 📄 Paper<br>
+                                📄 Paper covers 🪨 Rock<br>
+                                🪨 Rock crushes 🦎 Lizard<br>
+                                🦎 Lizard poisons 🖖 Spock<br>
+                                🖖 Spock smashes ✂️ Scissors<br>
+                                ✂️ Scissors decapitates 🦎 Lizard<br>
+                                🦎 Lizard eats 📄 Paper<br>
+                                📄 Paper disproves 🖖 Spock<br>
+                                🖖 Spock vaporizes 🪨 Rock<br>
+                                🪨 Rock crushes ✂️ Scissors
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main id="main" class=" d-flex container-fluid flex-column vertical-center">
+        <div class="row justify-content-center ">
+            <h1 class="title col-5">Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <button class="menu-btn" data-bs-target="#gameModeModal" data-bs-toggle="modal">New Game</button>
+            </div>
+            <div class="col-3">
+                <button class="menu-btn" data-bs-target="#showRulesModal" data-bs-toggle="modal">Show Rules</button>
+            </div>
+            
+        </div>
+
+        <div class="modal fade" id="gameModeModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content modal-bg-muted-purple">
+                    <div class="container modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="modal-title text-center" id="exampleModalToggleLabel">Game Mode</h1>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-4">
+                                <button id="playerVsPlayerBtn" class="menu-btn" data-bs-target="#pvp-modal" data-bs-toggle="modal">Player vs Player</button>
+                                <button id="playerVsComputerBtn" class="menu-btn" data-bs-target="#pvcpu-modal" data-bs-toggle="modal">Player vs Computer</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pvcpu-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content modal-bg-muted-purple">
+                    <div class="container modal-body">
+                        <div class="row">
+                            <div class="col d-flex justify-content-between">
+                                <button type="button" class="nav-btn-style" data-bs-target="#gameModeModal" data-bs-toggle="modal"> &lt;&lt; </button>
+                                <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="modal-title text-center" id="exampleModalToggleLabel">Match Length</h1>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-4">
+                                <button id="computerBestOf1Btn" class="menu-btn" data-bs-dismiss="modal">Sudden <br> Death</button>
+                                <button id="computerBestOf5Btn" class="menu-btn" data-bs-dismiss="modal">Best of 5</button>
+                                <button id="computerBestOf7Btn" class="menu-btn" data-bs-dismiss="modal">Best of 7</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pvp-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content modal-bg-muted-purple">
+                    <div class="container modal-body">
+                        <div class="row">
+                            <div class="col d-flex justify-content-between">
+                                <button type="button" class="nav-btn-style" data-bs-target="#gameModeModal" data-bs-toggle="modal"> &lt;&lt; </button>
+                                <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="modal-title text-center" id="exampleModalToggleLabel">Match Length</h1>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-4">
+                                <button id="playerBestOf1Btn" class="menu-btn" data-bs-dismiss="modal">Sudden <br> Death</button>
+                                <button id="playerBestOf5Btn" class="menu-btn" data-bs-dismiss="modal">Best of 5</button>
+                                <button id="playerBestOf7Btn" class="menu-btn" data-bs-dismiss="modal">Best of 7</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <section id="gamePlayScreen" class="d-none container-fluid">
+        <div class="d-flex row justify-content-center">
+            <h1 id="instructions" class="col-4 modal-bg-muted-purple text-center mt-5">
+                Choose your move:
+            </h1>
+        </div>
+        <div class="row mt-2 d-flex justify-content-evenly">
+            <div class="col d-flex justify-content-center">
+                <button id="rockBtn" class="move-btn-style">
+                    <img src="./assets/icons/Rock.png" alt="Game icon">
+                </button>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <button id="paperBtn" class="move-btn-style">
+                    <img src="./assets/icons/Paper.png" alt="Game icon">
+                </button>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <button id="scissorsBtn" class="move-btn-style">
+                    <img src="./assets/icons/Scissors.png" alt="Game icon">
+                </button>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <button id="lizardBtn" class="move-btn-style">
+                    <img src="./assets/icons/Lizard.png" alt="Game icon">
+                </button>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <button id="spockBtn" class="move-btn-style">
+                    <img src="./assets/icons/Spock.png" alt="Game icon">
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <button class="col menu-btn d-flex align-items-center justify-content-center" data-bs-target="#showRulesModal" data-bs-toggle="modal">
+                <p>
+                    Show Rules
+                </p>
+            </button>
+
+            <button id="forfeit" class="col menu-btn d-flex align-items-center justify-content-center">
+                <p>
+                    Back To Menu
+                </p>
+            </button>
+        </div>
+        <div class="row d-flex justify-content-center mt-4">
+            <div class="col-1 score-card d-flex justify-content-center align-items-center">
+                <h3 id="p1Score">0</h3>
+            </div>
+            <h3 id="mainResult" class="col-4 modal-bg-muted-purple d-flex justify-content-center">
+                Results
+            </h3>
+            <div class="col-1 score-card d-flex justify-content-center align-items-center">
+                <h3 id="p2Score">0</h3>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="gameOverMenu" class="d-none container-fluid">
+        <div class="d-flex row justify-content-center">
+            <h1 id="resultsTitle" class="col-4 modal-bg-muted-purple text-center mt-5">
+                Results Text
+            </h1>
+        </div>
+
+        <div class="row">
+            <p id="resultsBody">
+
+            </p>
+        </div>
+
+        <div class="row">
+            <button id="replayBtn" class="col menu-btn d-flex align-items-center justify-content-center">
+                <p>
+                    Play Again
+                </p>
+            </button>
+
+            <button id="mainMenuReturn" class="col menu-btn d-flex align-items-center justify-content-center">
+                <p>
+                    Back To Menu
+                </p>
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>

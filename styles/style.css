@@ -1,0 +1,114 @@
+:root{
+    --muted-purple: #3E3E6B;
+    --ruddy-pink: #E58C8E;
+}
+
+@font-face {
+    font-family: "Audiowide";
+    src: url(../assets/fonts/Audiowide/Audiowide-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open_Sans";
+    src: url(../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+body {
+    background-image: url(../assets/BlankBackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3.75rem;
+}
+
+h3 {
+    font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.813rem;
+}
+
+.vertical-center {
+    /* display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr); */
+    margin-top: calc(0.32 * 100vh);
+}
+
+
+.title {
+    text-align: center;
+    grid-row: 3 / span 4;
+    grid-column: 3 / span 6;
+}
+
+.modal-style {
+    width: 60%;
+    height: 80%;
+}
+
+.modal-bg-muted-purple {
+    background-color: var(--muted-purple);
+    color: white;
+}
+
+.nav-btn-style {
+    font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    color: var(--ruddy-pink);
+    background-color: transparent;
+    border: none;
+}
+
+.menu-btn {
+    font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px;
+    width: 100%;
+    height: 135px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.75;
+    margin: 1rem 0 1rem;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+    border: 1px solid black ;
+    background-color: white;
+    opacity: 1;
+}
+
+img {
+    width: 112px;
+    aspect-ratio: 1;
+    height: 135px;
+}
+
+.move-btn-style {
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+}
+
+.move-btn-style:hover {
+    cursor: pointer;
+    opacity: .75;
+    padding: 0;
+    /* border: 2px solid black;
+    border-radius: 15px; */
+}
+
+.score-card {
+    background-color: #71A499;
+    font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid black;
+}
