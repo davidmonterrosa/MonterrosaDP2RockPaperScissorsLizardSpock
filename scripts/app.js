@@ -103,7 +103,18 @@ function isGameOver() {
             resultsBody.innerText = `Player 1: ${player1Score} Player 2: ${player2Score}`;
             return true;
         }
-    }
+    } else if(opponent === "computer") {
+        if (computerScore >= matchLength) {
+            resultsTitle.innerText = "Computer Wins!";
+            resultsBody.innerText = `You: ${player1Score} Computer: ${computerScore}`;
+            return true;
+        } else if (player1Score >= matchLength) {
+            resultsTitle.innerText = "You Win!";
+            resultsBody.innerText = `You: ${player1Score} Computer: ${computerScore}`;
+            return true;
+        } 
+    } 
+    return false;
 }
 
 computerBestOf1Btn.addEventListener("click", () => {

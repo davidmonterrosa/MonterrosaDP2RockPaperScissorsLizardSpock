@@ -60,6 +60,12 @@ h3 {
     color: white;
 }
 
+.rules-text {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-left: calc(0.1 * 100vw);
+}
+
 .nav-btn-style {
     font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 45px;
@@ -111,4 +117,9 @@ img {
     background-color: #71A499;
     font-family: "Audiowide", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: 2px solid black;
+}
+
+.results-body-text {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: 3.75rem;
 }
