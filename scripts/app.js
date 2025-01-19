@@ -23,7 +23,9 @@ const forfeit = document.getElementById("forfeit");
 const mainMenuReturn = document.getElementById("mainMenuReturn");
 
 const resultsTitle = document.getElementById("resultsTitle");
-const resultsBody = document.getElementById("resultsBody");
+const resultsBodyMain = document.getElementById("resultsBodyMain");
+const resultsBodyp1 = document.getElementById("resultsBodyp1");
+const resultsBodyp2 = document.getElementById("resultsBodyp2");
 const p1Score = document.getElementById("p1Score");
 const p2Score = document.getElementById("p2Score");
 
@@ -42,6 +44,7 @@ const gameOverMenu = document.getElementById("gameOverMenu");
 // need a variable to track the move
 let player1Move = "";
 let player2Move = "";
+let computerMove = "";
 
 let player1Score = 0;
 let player2Score = 0;
@@ -73,8 +76,11 @@ function displayMainMenu() {
     p1Score.innerText = 0;
     p2Score.innerText = 0;
     mainResult.innerText = "";
+    instructions.innerText = "Choose your move:";
     resultsTitle.innerText = "Results Text";
-    resultsBody.innerText = "";
+    resultsBodyMain.innerText = "";
+    resultsBodyp1.innerText = "";
+    resultsBodyp2.innerText = "";
 }
 
 function displayGame() {
@@ -87,30 +93,41 @@ function displayGame() {
     }
     p1Score.innerText = 0;
     p2Score.innerText = 0;
+    instructions.innerText = "Choose your move:";
     mainResult.innerText = "";
     resultsTitle.innerText = "Results Text";
-    resultsBody.innerText = "";
+    resultsBodyMain.innerText = "";
+    resultsBodyp1.innerText = "";
+    resultsBodyp2.innerText = "";
 }
 
 function isGameOver() {
     if(opponent === "player") {
         if(player1Score >= matchLength) {
             resultsTitle.innerText = "Player 1 Wins!";
-            resultsBody.innerText = `Player 1: ${player1Score} Player 2: ${player2Score}`;
+            resultsBodyMain.innerText = `${player1Move} beats ${player2Move}`
+            resultsBodyp1.innerText = `Player 1 Score: ${player1Score}` 
+            resultsBodyp2.innerText = `Player 2 Score: ${player2Score}`;
             return true;
         } else if (player2Score >= matchLength) {
             resultsTitle.innerText = "Player 2 Wins!";
-            resultsBody.innerText = `Player 1: ${player1Score} Player 2: ${player2Score}`;
+            resultsBodyMain.innerText = `${player2Move} beats ${player1Move}`
+            resultsBodyp1.innerText = `Player 1 Score: ${player1Score}` 
+            resultsBodyp2.innerText = `Player 2 Score: ${player2Score}`;
             return true;
         }
     } else if(opponent === "computer") {
         if (computerScore >= matchLength) {
             resultsTitle.innerText = "Computer Wins!";
-            resultsBody.innerText = `You: ${player1Score} Computer: ${computerScore}`;
+            resultsBodyMain.innerText = `${computerMove} beats ${player1Move}`
+            resultsBodyp1.innerText = `You: ${player1Score}` 
+            resultsBodyp2.innerText = `Computer: ${computerScore}`;
             return true;
         } else if (player1Score >= matchLength) {
             resultsTitle.innerText = "You Win!";
-            resultsBody.innerText = `You: ${player1Score} Computer: ${computerScore}`;
+            resultsBodyMain.innerText = `${player1Move} beats ${computerMove}`
+            resultsBodyp1.innerText = `You: ${player1Score}` 
+            resultsBodyp2.innerText = `Computer: ${computerScore}`;
             return true;
         } 
     } 
@@ -165,6 +182,7 @@ playerBestOf7Btn.addEventListener("click", () => {
 forfeit.addEventListener("click", () => {
     player1Move = "";
     player2Move = "";
+    computerMove = "";
     player1Score = 0;
     player2Score = 0;
     computerScore = 0;
@@ -177,6 +195,7 @@ forfeit.addEventListener("click", () => {
 mainMenuReturn.addEventListener("click", () => {
     player1Move = "";
     player2Move = "";
+    computerMove = "";
     player1Score = 0;
     player2Score = 0;
     computerScore = 0;
@@ -189,6 +208,7 @@ mainMenuReturn.addEventListener("click", () => {
 replayBtn.addEventListener("click", () => {
     player1Move = "";
     player2Move = "";
+    computerMove = "";
     player1Score = 0;
     player2Score = 0;
     computerScore = 0;
@@ -199,7 +219,8 @@ replayBtn.addEventListener("click", () => {
 
 rockBtn.addEventListener("click", async () => {
     if(opponent === "computer"){
-        let computerMove = await getComputerMove();
+        player1Move = "Rock";
+        computerMove = await getComputerMove();
         console.log(computerMove)
         switch(computerMove) {
             case "Rock":
@@ -280,7 +301,8 @@ rockBtn.addEventListener("click", async () => {
 
 paperBtn.addEventListener("click", async () => {
     if(opponent === "computer"){
-        let computerMove = await getComputerMove();
+        player1Move = "Paper";
+        computerMove = await getComputerMove();
         switch(computerMove) {
             case "Rock":
                 mainResult.innerText = "You win! Paper covers rock";
@@ -356,7 +378,8 @@ paperBtn.addEventListener("click", async () => {
 
 scissorsBtn.addEventListener("click", async () => {
     if(opponent === "computer") {
-        let computerMove = await getComputerMove();
+        player1Move = "Scissors";
+        computerMove = await getComputerMove();
         switch(computerMove) {
             case "Rock":
                 mainResult.innerText = "Computer wins! Rock crushes scissors";
@@ -432,7 +455,8 @@ scissorsBtn.addEventListener("click", async () => {
 
 lizardBtn.addEventListener("click", async () => {
     if(opponent === "computer") {
-        let computerMove = await getComputerMove();
+        player1Move = "Lizard";
+        computerMove = await getComputerMove();
         switch(computerMove) {
             case "Rock":
                 mainResult.innerText = "Computer wins! Rock crushes lizard";
@@ -508,7 +532,8 @@ lizardBtn.addEventListener("click", async () => {
 
 spockBtn.addEventListener("click", async () => {
     if(opponent === "computer") {
-        let computerMove = await getComputerMove();
+        player1Move = "Spock";
+        computerMove = await getComputerMove();
         switch(computerMove) {
             case "Rock":
                 mainResult.innerText = "You win! Spock vaporizes rock";

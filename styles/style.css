@@ -43,11 +43,14 @@ h3 {
     margin-top: calc(0.32 * 100vh);
 }
 
+.top-margin {
+    margin-top: 135px;
+}
 
 .title {
     text-align: center;
-    grid-row: 3 / span 4;
-    grid-column: 3 / span 6;
+    /* grid-row: 3 / span 4;
+    grid-column: 3 / span 6; */
 }
 
 .modal-style {
@@ -111,6 +114,10 @@ img {
     padding: 0;
     /* border: 2px solid black;
     border-radius: 15px; */
+}
+
+.score-area {
+    height: 225px;
 }
 
 .score-card {

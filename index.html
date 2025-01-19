@@ -19,16 +19,16 @@
             <div class="modal-content modal-bg-muted-purple">
                 <div class="container modal-body">
                     <div class="row">
-                        <div class="col">
+                        <div class="col d-flex justify-content-end">
                             <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h1 class="modal-title text-center" id="exampleModalToggleLabel">Game Mode</h1>
+                            <h1 class="modal-title text-center" id="exampleModalToggleLabel">Game Rules</h1>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col">
                             <p class="rules-text">
                                 ✂️ Scissors cuts 📄 Paper<br>
@@ -54,11 +54,11 @@
         <div class="row justify-content-center ">
             <h1 class="title col-5">Rock Paper Scissors Lizard Spock</h1>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-3">
+        <div class="row justify-content-center mt-5">
+            <div class="col-3 me-5">
                 <button class="menu-btn" data-bs-target="#gameModeModal" data-bs-toggle="modal">New Game</button>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-5">
                 <button class="menu-btn" data-bs-target="#showRulesModal" data-bs-toggle="modal">Show Rules</button>
             </div>
             
@@ -70,7 +70,7 @@
                 <div class="modal-content modal-bg-muted-purple">
                     <div class="container modal-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col d-flex justify-content-end">
                                 <button type="button" class="nav-btn-style" data-bs-dismiss="modal" aria-label="Close"> X </button>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 <h1 class="modal-title text-center" id="exampleModalToggleLabel">Game Mode</h1>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center">
+                        <div class="row d-flex justify-content-center mt-5 mb-5">
                             <div class="col-4">
                                 <button id="playerVsPlayerBtn" class="menu-btn" data-bs-target="#pvp-modal" data-bs-toggle="modal">Player vs Player</button>
                                 <button id="playerVsComputerBtn" class="menu-btn" data-bs-target="#pvcpu-modal" data-bs-toggle="modal">Player vs Computer</button>
@@ -107,7 +107,7 @@
                                 <h1 class="modal-title text-center" id="exampleModalToggleLabel">Match Length</h1>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center">
+                        <div class="row d-flex justify-content-center mt-5">
                             <div class="col-4">
                                 <button id="computerBestOf1Btn" class="menu-btn" data-bs-dismiss="modal">Sudden <br> Death</button>
                                 <button id="computerBestOf5Btn" class="menu-btn" data-bs-dismiss="modal">Best of 5</button>
@@ -135,7 +135,7 @@
                                 <h1 class="modal-title text-center" id="exampleModalToggleLabel">Match Length</h1>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center">
+                        <div class="row d-flex justify-content-center mt-5">
                             <div class="col-4">
                                 <button id="playerBestOf1Btn" class="menu-btn" data-bs-dismiss="modal">Sudden <br> Death</button>
                                 <button id="playerBestOf5Btn" class="menu-btn" data-bs-dismiss="modal">Best of 5</button>
@@ -151,12 +151,12 @@
     </main>
 
     <section id="gamePlayScreen" class="d-none container-fluid">
-        <div class="d-flex row justify-content-center">
-            <h1 id="instructions" class="col-4 modal-bg-muted-purple text-center mt-5">
+        <div class="d-flex row justify-content-center top-margin">
+            <h1 id="instructions" class="col-5 modal-bg-muted-purple text-center mb-5 py-5">
                 Choose your move:
             </h1>
         </div>
-        <div class="row mt-2 d-flex justify-content-evenly">
+        <div class="row my-5 d-flex justify-content-evenly">
             <div class="col d-flex justify-content-center">
                 <button id="rockBtn" class="move-btn-style">
                     <img src="./assets/icons/Rock.png" alt="Game icon">
@@ -187,24 +187,28 @@
                 </button>
             </div>
         </div>
-        <div class="row">
-            <button class="col menu-btn d-flex align-items-center justify-content-center" data-bs-target="#showRulesModal" data-bs-toggle="modal">
-                <p>
-                    Show Rules
-                </p>
-            </button>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 me-5">
+                <button class="menu-btn " data-bs-target="#showRulesModal" data-bs-toggle="modal">
+                    <p>
+                        Show Rules
+                    </p>
+                </button>
+            </div>
 
-            <button id="forfeit" class="col menu-btn d-flex align-items-center justify-content-center">
-                <p>
-                    Back To Menu
-                </p>
-            </button>
+            <div class="col-3 ms-5">
+                <button id="forfeit" class="menu-btn ">
+                    <p>
+                        Back To Menu
+                    </p>
+                </button>
+            </div>
         </div>
-        <div class="row d-flex justify-content-center mt-4">
+        <div class="row d-flex justify-content-center mt-4 mb-4 score-area">
             <div class="col-1 score-card d-flex justify-content-center align-items-center">
                 <h3 id="p1Score">0</h3>
             </div>
-            <h3 id="mainResult" class="col-4 modal-bg-muted-purple d-flex justify-content-center">
+            <h3 id="mainResult" class="col-5 modal-bg-muted-purple d-flex justify-content-center align-items-center mb-0">
                 Results
             </h3>
             <div class="col-1 score-card d-flex justify-content-center align-items-center">
@@ -215,30 +219,43 @@
     </section>
 
     <section id="gameOverMenu" class="d-none container-fluid">
-        <div class="d-flex row justify-content-center vertical-center">
-            <h1 id="resultsTitle" class="col-4 modal-bg-muted-purple text-center">
+        <div class="d-flex row justify-content-center top-margin">
+            <h1 id="resultsTitle" class="col-4 modal-bg-muted-purple text-center py-5">
                 Results Text
             </h1>
         </div>
 
-        <div class="row d-flex justify-content-center">
-            <p id="resultsBody" class="col-6 results-body-text mt-3">
-                Player: 3 Computer: 2
+        <div class="row">
+            <p id="resultsBodyMain" class="results-body-text text-center">
+                Last play explained
             </p>
         </div>
 
-        <div class="row">
-            <button id="replayBtn" class="col menu-btn d-flex align-items-center justify-content-center">
-                <p>
-                    Play Again
-                </p>
-            </button>
+        <div class="row d-flex justify-content-center">
+            <p id="resultsBodyp1" class="col-6 results-body-text text-center mt-3">
+                Player: 3
+            </p>
+            <p id="resultsBodyp2" class="col-6 results-body-text text-center mt-3">
+                Computer: 2
+            </p>
+        </div>
 
-            <button id="mainMenuReturn" class="col menu-btn d-flex align-items-center justify-content-center">
-                <p>
-                    Back To Menu
-                </p>
-            </button>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 me-5">
+                <button id="replayBtn" class="col menu-btn d-flex align-items-center justify-content-center">
+                    <p>
+                        Play Again
+                    </p>
+                </button>
+            </div>
+            
+            <div class="col-3 ms-5">
+                <button id="mainMenuReturn" class="col menu-btn d-flex align-items-center justify-content-center">
+                    <p>
+                        Back To Menu
+                    </p>
+                </button>
+            </div>
 
         </div>
 
