@@ -38,5 +38,5 @@ Here are the requirements:
 + mm/dd/yyyy - DM - short description
 - 01/15/2025 - DM - Created git repository.
 
-Peer Reviewed By:
-> Comments:
+Peer Reviewed By: Charles Orr
+> Comments: this might be one of the coolest projects ive seen, its inspiring for my own as the animations just make everything feel awesome, i couldnt find any flaws while reviewing, great work, keep it up :)
