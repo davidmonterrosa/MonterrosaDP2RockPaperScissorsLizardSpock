@@ -1,3 +1,7 @@
+# David Monterrosa
+# Last Date Revised: 01/15/2025
+# "Challenge - Rock Paper Scissor Lizard Spock"
+### Description:
 You are to make Rock, Paper, Scissors, Lizard, Spock game.
 
 Here are the requirements:
@@ -22,3 +26,17 @@ Here are the requirements:
 8. Lizard eats paper.
 9. Spock smashes scissors.
 10. Spock vaporizes rock.
+
+### Figma Approved by Bryan Stewart on 01/15/2025  
+
+### Links
+[Github Repository](https://github.com/davidmonterrosa/MonterrosaDP2RockPaperScissorsLizardSpock.git)
+
+[Hosted API Via Azure](monterrosarpslsv1-aaapdudtatbdgtc0.westus-01.azurewebsites.net)
+
+### Change Log
++ mm/dd/yyyy - DM - short description
+- 01/15/2025 - DM - Created git repository.
+
+Peer Reviewed By:
+> Comments:
