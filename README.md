@@ -1,6 +1,6 @@
 # David Monterrosa
 # Last Date Revised: 01/18/2025
-# "Challenge - Rock Paper Scissor Lizard Spock"
+# "Project - Rock Paper Scissor Lizard Spock"
 ### Description:
 You are to make Rock, Paper, Scissors, Lizard, Spock game.
 
